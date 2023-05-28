@@ -19,16 +19,22 @@
         flex-direction: column;
         align-items: stretch;
       }
-      div.js-video-container {
+      div.buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+         box-shadow: 0 0 10px rgb(0,0,0);
+      }
+      div.js-video-container, div.empty {
         flex-grow: 1;
       }
     </style>
   </head>
   <body>
 
-    <div id="player" style="width: 800px; height: 600px; box-shadow: 0 0 10px rgb(0,0,0)">
+    <div id="player" style="width: 800px; height: 600px;">
           <div class="js-video-container"></div>
-          <div style="background: black;">
+          <div class="buttons" style="background: black;">
             <button class="player-button js-play-button" hidden>
               <i class="fa fa-play" aria-hidden="true"></i>
             </button>
@@ -42,6 +48,10 @@
               <i class="fa fa-volume-off" aria-hidden="true"></i>
             </button>
             <button class="player-button js-current-time"></button>
+            <div class="empty"></div>
+            <button class="player-button js-fullscreen-button">
+              <i class="fa fa-expand" aria-hidden="true"></i>
+            </button>
           </div>
     </div>
 
