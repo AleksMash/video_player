@@ -10,8 +10,8 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        width: 800px;
-        height: 600px;
+        width: 640px;
+        height: 480px;
         box-shadow: 0 0 10px rgb(0,0,0);
       }
       .vp-main .vp-buttons {
@@ -19,16 +19,20 @@
         display: flex;
         flex-direction: row;
         align-items: stretch;
-
-      }
+       }
       .vp-buttons .vp-button {
         width: 30px;
         height: 30px;
-        margin: 3px;
+        margin: 2px 0px;
         cursor: pointer;
         background-color: transparent;
         color: white;
         font-size: medium;
+        border-width: 0px;
+      }
+      .vp-buttons .vp-numbers {
+        font-size: small;
+        padding: 0px 0px;
       }
       .vp-screen, .vp-empty {
         flex-grow: 1;
@@ -52,7 +56,7 @@
             <button class="vp-button js-volume-button" hidden>
               <i class="fa fa-volume-off" aria-hidden="true"></i>
             </button>
-            <button class="vp-button js-current-time"></button>
+            <button class="vp-button vp-numbers js-current-time"></button>
             <div class="vp-empty"></div>
             <button class="vp-button js-fullscreen-button">
               <i class="fa fa-expand" aria-hidden="true"></i>
