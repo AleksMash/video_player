@@ -5,6 +5,9 @@
     <title>Super Video Player</title>
     <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="static/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style type="text/css">
       .vp-main {
         display: flex;
@@ -20,7 +23,7 @@
         flex-direction: row;
         align-items: stretch;
        }
-      .vp-buttons .vp-button {
+      .vp-buttons .vp-button  {
         width: 30px;
         height: 30px;
         margin: 2px 0px;
@@ -33,6 +36,22 @@
       .vp-buttons .vp-numbers {
         font-size: small;
         padding: 0px 0px;
+        font-family: 'Roboto';
+        color: white;
+        margin: auto;
+      }
+
+      .vp-progress, .vp-slider {
+        margin-left: 7px;
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 4px;
+        width: 100px;
+        box-sizing: border-box;
+        border-radius: 2px;
+      }
+      .vp-slider {
+        margin-left: 0
       }
       .vp-screen, .vp-empty {
         flex-grow: 1;
@@ -56,8 +75,12 @@
             <button class="vp-button js-volume-button" hidden>
               <i class="fa fa-volume-off" aria-hidden="true"></i>
             </button>
-            <button class="vp-button vp-numbers js-current-time"></button>
+            <div class="vp-numbers js-current-time"></div>
+            <div class="vp-progress  js-progress" style="background-color: grey;">
+              <div class="vp-slider js-progress-slider" style="background-color: red;"></div>
+            </div>
             <div class="vp-empty"></div>
+            <div class="vp-numbers js-duration"></div>
             <button class="vp-button js-fullscreen-button">
               <i class="fa fa-expand" aria-hidden="true"></i>
             </button>
