@@ -69,3 +69,6 @@
 .vp-buttons:hover .circle {
     opacity: 100%;
 }
+.vp-button:hover, .circle:hover {
+    cursor: pointer;
+}
